@@ -37,7 +37,7 @@ export class App {
   }
   private initializeControllers(controllers: any[]) {
     controllers.forEach((controller) => {
-      this.app.use('/', controller.router);
+      this.app.use(controller.path, controller.router);
     });
   }
 }

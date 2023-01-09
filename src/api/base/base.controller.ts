@@ -16,6 +16,8 @@ export class Controller {
   intializeRoutes() {
     this.router.get(EMPTY, this.getAll);
     this.router.post(EMPTY, this.create);
+    this.router.patch(EMPTY, this.update);
+    this.router.delete(EMPTY, this.delete);
   }
 
   async getAll(request: express.Request, response: express.Response) /*: ApiResponse<Entity[]>*/ {
