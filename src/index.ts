@@ -1,8 +1,7 @@
-import { expressApp } from './app';
-import { TestController } from './api/test/controller';
+import { expressApp } from './app/app';
+import { PORT } from './common/constants';
 
-const PORT = process.env.PORT;
-const myApp = expressApp([new TestController()]);
+const myApp = expressApp();
 
 myApp.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
